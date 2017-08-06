@@ -14,10 +14,10 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { AngularFireModule } from 'angularfire2';
 
 export const firebaseConfig = {
-  apiKey: "AIzaSyDnAX0CQbbsMYuOTJ66ox_F0GwzPM4XPXY",
-  authDomain: "angularfire2-list-example.firebaseapp.com",
-  databaseURL: "https://angularfire2-list-example.firebaseio.com",
-  storageBucket: "",
+  apiKey: "AIzaSyCm5Ws_wq4jLJxAcgs2_2JV--Q5XHvHcOE",
+  authDomain: "bucket-ionic-and-firebase.firebaseapp.com",
+  databaseURL: "https://bucket-ionic-and-firebase.firebaseio.com/",
+  storageBucket: "gs://bucket-ionic-and-firebase.appspot.com",
   messagingSenderId: "609067141823"
 };
 
