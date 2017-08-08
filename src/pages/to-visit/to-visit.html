@@ -12,7 +12,14 @@
 
 </ion-header>
 
-
 <ion-content padding>
-
+    <ion-list>
+      <ion-list-header>Places to Visit</ion-list-header>
+      <ion-item *ngFor="let place of placeList | async">
+        <ion-icon name="book" danger item-left></ion-icon>
+        <h2>{{place.name}}</h2>
+        <h3>Address: {{place.address}}, {{place.city}}</h3>
+        <p>Phone: {{place.phone}}</p>
+      </ion-item>
+    </ion-list>
 </ion-content>

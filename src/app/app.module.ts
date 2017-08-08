@@ -9,20 +9,12 @@ import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
 import { ToVisitPage } from '../pages/to-visit/to-visit';
 import { VisitedPage } from '../pages/visited/visited';
-import { ProfilePage } from '../pages/profile/profile';
+import { AddPlacePage } from '../pages/add-place/add-place';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { AngularFireModule } from 'angularfire2';
-
-export const firebaseConfig = {
-  apiKey: "AIzaSyCm5Ws_wq4jLJxAcgs2_2JV--Q5XHvHcOE",
-  authDomain: "bucket-ionic-and-firebase.firebaseapp.com",
-  databaseURL: "https://bucket-ionic-and-firebase.firebaseio.com/",
-  storageBucket: "gs://bucket-ionic-and-firebase.appspot.com",
-  messagingSenderId: "609067141823"
-};
 
 @NgModule({
   declarations: [
@@ -33,7 +25,7 @@ export const firebaseConfig = {
     TabsPage,
     ToVisitPage,
     VisitedPage,
-    ProfilePage
+    AddPlacePage
   ],
   imports: [
     BrowserModule,
@@ -49,7 +41,7 @@ export const firebaseConfig = {
     TabsPage,
     ToVisitPage,
     VisitedPage,
-    ProfilePage
+    AddPlacePage
   ],
   providers: [
     StatusBar,
@@ -57,4 +49,13 @@ export const firebaseConfig = {
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
+
 export class AppModule {}
+
+export const firebaseConfig = {
+  apiKey: "AIzaSyCm5Ws_wq4jLJxAcgs2_2JV--Q5XHvHcOE",
+  authDomain: "bucket-ionic-and-firebase.firebaseapp.com",
+  databaseURL: "https://bucket-ionic-and-firebase.firebaseio.com/",
+  storageBucket: "gs://bucket-ionic-and-firebase.appspot.com",
+  messagingSenderId: "609067141823"
+};

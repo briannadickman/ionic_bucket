@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { AddPlacePage } from '../pages/add-place/add-place';
 
 /**
  * Generated class for the ToVisitPage page.
@@ -13,13 +14,15 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   selector: 'page-to-visit',
   templateUrl: 'to-visit.html',
 })
-export class ToVisitPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+export class ToVisitPage {
+  placeList: FirebaseListObservable<any>;
+  constructor(public navCtrl: NavController, public af: AngularFire) {
+    this.placeList = af.database.list('/places');
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad ToVisitPage');
+  addPlace(){
+    this.navCtrl.push(AddPlacePage);
   }
 
 }
